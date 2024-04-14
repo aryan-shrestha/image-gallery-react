@@ -1,0 +1,6 @@
+.image-viewer-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.381);
+    height: 100vh;
+    width: 100%;
+}

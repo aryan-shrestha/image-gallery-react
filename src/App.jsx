@@ -1,7 +1,6 @@
 import "./App.css";
 
-import Navbar from "./components/Navbar/Navbar";
-import ThumbnailContainer from "./components/ThumbnailContainer/ThumbnailContainer";
+import { ImageViewer, Navbar, ThumbnailContainer } from "./components";
 
 function App() {
 
@@ -9,6 +8,7 @@ function App() {
     <>
       <Navbar />
       <ThumbnailContainer />
+      <ImageViewer />
     </>
   );
 }
