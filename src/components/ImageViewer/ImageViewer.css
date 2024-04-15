@@ -1,6 +1,31 @@
 .image-viewer-container {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.381);
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-viewer-container > img {
+    height: 80%;
+    border-radius: 15px;
+}
+
+.image-viewer-container > button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ffffffc8;
+    color: #000;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
 }

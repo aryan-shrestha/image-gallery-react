@@ -2,10 +2,10 @@ import React from 'react'
 
 import './Thumbnail.css'
 
-const Thumbnail = (props) => {
+const Thumbnail = ({src, toggleImageViewer}) => {
   return (
-    <div className='thumbnail'>
-        <img src={props.src} alt="thumbnail" />
+    <div className='thumbnail' onClick={toggleImageViewer}>
+        <img src={src} alt="thumbnail" />
     </div>
   )
 }

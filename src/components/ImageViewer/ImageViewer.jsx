@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import './ImageViewer.css';
+import "./ImageViewer.css";
 
-const ImageViewer = () => {
+const ImageViewer = ({setisImageViewerOn, activeImage}) => {
+  const toggleImageViewer = () => {
+    setisImageViewerOn(false);
+  };
   return (
-    <div className='image-viewer-container'>
-
+    <div className="image-viewer-container">
+      <button onClick={toggleImageViewer}>X</button>
+      <img
+        src={activeImage}
+        alt="image"
+      />
     </div>
-  )
-}
+  );
+};
 
-export default ImageViewer
+export default ImageViewer;
