@@ -1,13 +1,24 @@
-import React from 'react'
+import React from "react";
 
-import './Thumbnail.css'
+import "./Thumbnail.css";
 
-const Thumbnail = ({src, toggleImageViewer}) => {
+const Thumbnail = ({ src, setIsImageViewerOn, setActiveImage }) => {
+  const toggleImageViewer = (e) => {
+    setIsImageViewerOn(true);
+    setActiveImage(e.target.src);
+  };
+
   return (
-    <div className='thumbnail' onClick={toggleImageViewer}>
-        <img src={src} alt="thumbnail" />
+    <div className="thumbnail">
+      <img
+        src={src}
+        alt="thumbnail"
+        onClick={(e) => {
+          toggleImageViewer(e);
+        }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Thumbnail
+export default Thumbnail;

@@ -1,31 +1,28 @@
-.image-viewer-container {
+.image-viewer {
+    background-color: rgba(0, 0, 0, 0.85);
     position: fixed;
     top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
+    width: 100%;
     height: 100vh;
-    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
-.image-viewer-container > img {
-    height: 80%;
-    border-radius: 15px;
+.image-viewer > img {
+    max-height: 70vh;
+    border-radius: 1rem;
 }
 
-.image-viewer-container > button {
+.image-viewer > button {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #ffffffc8;
-    color: #000;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-weight: 600;
     border: none;
-    height: 2rem;
-    width: 2rem;
     border-radius: 50%;
-    font-size: 1rem;
-    font-weight: 700;
+    cursor: pointer;
 }

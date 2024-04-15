@@ -1,17 +1,27 @@
 import { useState } from "react";
 import "./App.css";
 
-import Navbar from "./components/Navbar/Navbar";
-import ThumbnailContainer from "./components/ThumbnailContainer/ThumbnailContainer";
+import { ImageViewer, Navbar, ThumbnailContainer } from "./components";
 
 function App() {
-  const [isImageViewerOn, setisImageViewerOn] = useState(false);
+  const [isImageViewerOn, setIsImageViewerOn] = useState(false);
   const [activeImage, setActiveImage] = useState("");
 
   return (
     <>
       <Navbar />
-      <ThumbnailContainer />
+      <ThumbnailContainer
+        setIsImageViewerOn={setIsImageViewerOn}
+        setActiveImage={setActiveImage}
+      />
+      {isImageViewerOn ? (
+        <ImageViewer
+          activeImage={activeImage}
+          setIsImageViewerOn={setIsImageViewerOn}
+        />
+      ) : (
+        ""
+      )}
     </>
   );
 }
