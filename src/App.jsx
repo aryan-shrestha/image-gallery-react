@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
-import { ImageViewer, Navbar, ThumbnailContainer } from "./components";
+import Navbar from "./components/Navbar/Navbar";
+import ThumbnailContainer from "./components/ThumbnailContainer/ThumbnailContainer";
 
 function App() {
   const [isImageViewerOn, setisImageViewerOn] = useState(false);
@@ -10,18 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ThumbnailContainer
-        setisImageViewerOn={setisImageViewerOn}
-        setActiveImage={setActiveImage}
-      />
-      {isImageViewerOn ? (
-        <ImageViewer
-          setisImageViewerOn={setisImageViewerOn}
-          activeImage={activeImage}
-        />
-      ) : (
-        ""
-      )}
+      <ThumbnailContainer />
     </>
   );
 }
